@@ -13,8 +13,16 @@ export const routes: Routes = [
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact-page.component')
   },
- {
-  path: '**',
-  redirectTo: 'about' // Default route if no match found
- }
+  {
+    path: 'pokemons',
+    loadComponent: () => import('./pages/pokemons/pokemons-page.component')
+  },
+  {
+    path: 'pokemon/:id',
+    loadComponent: () => import('./pages/pokemon/pokemon-page.component')
+  },
+  {
+    path: '**',
+    redirectTo: 'about' // Default route if no match found
+  }
 ];
